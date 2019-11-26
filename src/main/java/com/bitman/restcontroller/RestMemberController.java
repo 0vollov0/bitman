@@ -1,23 +1,25 @@
 package com.bitman.restcontroller;
 
+import javax.servlet.http.HttpSession;
+
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bitman.member.dto.Member;
-import com.bitman.member.mapper.MemberMapper;
+import com.bitman.member.service.MemberServiceImp;
 
 @RestController
 @RequestMapping("/member")
 public class RestMemberController {
 	@Autowired
-	MemberMapper memberMapper;
+	MemberServiceImp memberService;
 	
-	@GetMapping("/findAll")
-	public int findAll(Model model) {
-		Member member = memberMapper.findAll();
-		return member.getId();
+	
+	
+	@PostMapping("/login")
+	public JSONObject login(String mail, String password,HttpSession session) {
+		return memberService.login(mail, password, session);
 	}
 }

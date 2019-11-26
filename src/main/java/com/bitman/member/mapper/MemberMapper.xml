@@ -7,4 +7,7 @@
     <select id="findAll" resultType="com.bitman.member.dto.Member">
         SELECT * FROM member;
     </select>
+    <select id="login" resultType="com.bitman.member.dto.Member">
+        SELECT * FROM member where mail=#{mail} and password=#{password};
+    </select>
 </mapper>

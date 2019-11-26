@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.bitman.coin.mapper.CoinMapper">
+    <update id="updateRealCoinInfo" parameterType="com.bitman.coin.dto.RealCoin">
+    	update real_coin_info
+    	set coin_amount=#{coin_amount},coin_asset_real=#{coin_asset_real},coin_asset_total=#{coin_asset_total}
+    	where coin_id = #{coin_id}
+    </update>
+</mapper>
