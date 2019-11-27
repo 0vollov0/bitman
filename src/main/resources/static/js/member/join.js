@@ -1,30 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<script type="text/javascript" src="/static/js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="/static/js/member/join.js"></script>
-</head>
-<body>
-<h3>회원가입</h3>
-
-<div id="join_form">
-<input type="hidden" id="secretCode">
-	이름 :: <input type="text" id="name" placeholder="이름"><br>
-	이메일 :: <input type="email" id="mail" placeholder="인증받을 이메일"><input id="send_mail" type="button" value="발송 및 중복확인"><br>
-	인증번호 : <input type="text" id="mailCode" placeholder="인증번호"><input type="button" id="mailCodeBtn" value="인증"><br>
-	인증 :: <input type="checkbox" id="CodeCheck" onclick="return false;"><br>
-	비밀번호 :: <input type="password" id="password"  placeholder="비밀번호"><br>
-	비밀번호 확인 :: <input type="password" id="password2"  placeholder="비밀번호 확인"><font id="pin_check1" size="2" color="red"></font><br>
-	2차 비밀번호 :: <input type="password" id="second_password" placeholder="2차 비밀번호"><br>
-	2차 비밀번호 확인 :: <input type="password" id="second_password2" placeholder="2차 비밀번호 확인" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/><font id="pin_check2" size="2" color="red"></font><br>
-	모의투자 금액 :: <input type="text" id="keep_KRW" placeholder="금액"><br>
-	<input type="button" id="joinBtn" value="가입하기">
-</div>
-<script>
 $(document).ready(function() {
 	pass_key();
 	sec_pass_key();
@@ -142,6 +115,3 @@ $('#joinBtn').on('click', function() {
 		});
 	}
 });
-</script>
-</body>
-</html>

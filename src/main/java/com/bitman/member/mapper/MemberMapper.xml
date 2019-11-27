@@ -10,4 +10,11 @@
     <select id="login" resultType="com.bitman.member.dto.Member">
         SELECT * FROM member where mail=#{mail} and password=#{password};
     </select>
+    <select id="mailCheck" parameterType="String" resultType="int">
+    	SELECT count(*) FROM member WHERE mail = #{mail};
+    </select>
+    <insert id="join">
+    	INSERT INTO member(name, mail, password, second_password, wallet_address, join_date, keep_KRW)
+ 		VALUES(#{name}, #{mail}, #{password}, #{second_password}, #{wallet_address}, now(), #{keep_KRW});
+    </insert>
 </mapper>

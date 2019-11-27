@@ -35,6 +35,11 @@ dependencies {
 	
 	compile('org.apache.tomcat.embed:tomcat-embed-jasper')
 	compile('javax.servlet:jstl:1.2')
+	// mail
+	compile("org.springframework.boot:spring-boot-starter-mail")
+	compile group: 'javax.mail', name: 'javax.mail-api', version: '1.6.0'
+	// jsoup
+	compile group: 'org.jsoup', name: 'jsoup', version: '1.11.3'
 	
 	compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
 	// https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient

@@ -76,4 +76,13 @@ public class Member {
 		this.keep_KRW = keep_KRW;
 	}
 
+	@Override
+	public String toString() {
+		return "Member [id=" + id + ", name=" + name + ", mail=" + mail + ", password=" + password
+				+ ", second_password=" + second_password + ", wallet_address=" + wallet_address + ", join_date="
+				+ join_date + ", keep_KRW=" + keep_KRW + "]";
+	}
+	
+	
+
 }
