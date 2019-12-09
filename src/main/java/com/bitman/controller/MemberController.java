@@ -64,7 +64,7 @@ public class MemberController {
 	
 	@ResponseBody
 	@PostMapping(
-			value="/mailSend", 
+			value="/mailSend",
 			produces="application/json; charset=utf-8")
 	public Object mailSend(String subject, String mail) {
 		System.out.println("::: mail test ::: " + mail);
@@ -90,9 +90,9 @@ public class MemberController {
 			System.out.println("::: mail test success :::");
 		}
 		*/
-		System.out.println("ȸ������ ���� �̸���");
-		subject = "[BITMAN] ȸ������ ������ȣ";
-		String text = "������ȣ :: " + random;
+		System.out.println("메일인증");
+		subject = "[BITMAN] 인증메일";
+		String text = "인증번호 :: " + random;
 		EmailServiceImpl esi = new EmailServiceImpl();
 		esi.setJavaMailSender(emailSender);
 		esi.sendSimpleMessage(mail, subject, text);
